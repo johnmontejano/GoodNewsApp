@@ -6,8 +6,15 @@
 //  Copyright © 2016 John Montejano. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class WebViewController: UIViewController {
-
+    
+    var url: NSURL!
+    @IBOutlet weak var webView: UIWebView!
+    
+    override func viewDidLoad() {
+        webView.loadRequest(NSURLRequest(URL: url))
+    }
+    
 }
